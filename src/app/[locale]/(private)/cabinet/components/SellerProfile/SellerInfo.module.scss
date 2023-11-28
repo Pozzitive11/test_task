@@ -1,0 +1,116 @@
+@import 'constants/constans';
+
+.seller {
+  @include flexRow(center);
+
+  position: relative;
+  gap: toRem(16);
+
+  &__img {
+    position: relative;
+  }
+
+  &__level {
+    position: absolute;
+    left: toRem(8);
+    top: toRem(8);
+    padding: toRem(8) toRem(16);
+    background-color: #ecf2fe;
+    border-radius: toRem(30);
+    box-shadow: $box_shadow;
+    border: toRem(1) solid #fff;
+    font-size: toRem(14);
+    line-height: 142.857143%; /* 20/14 */
+
+    [data-theme='dark'] & {
+      & span {
+        @include color-accent();
+      }
+    }
+  }
+
+  &__top {
+    @include flexRow(center);
+    margin-bottom: toRem(16);
+    gap: toRem(16);
+    color: $dark;
+    font-size: toRem(24);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.333%; /* 32px */
+  }
+
+  &__offers {
+    margin-bottom: toRem(18);
+    span {
+      margin-right: toRem(8);
+      color: $dark;
+      font-size: toRem(20);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 28px */
+    }
+  }
+  &__achievements {
+    @include flexRow(center);
+    gap: toRem(20);
+    color: #fff;
+  }
+  &__achievement {
+    @include flexRow(center, center);
+
+    background-image: url(../../../../../../assets/images/hexagon/accent-hexagon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: toRem(38);
+    height: toRem(44);
+  }
+
+  &__button {
+    @include flexRow(center, center);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: toRem(48);
+    height: toRem(48);
+    gap: toRem(12);
+    backdrop-filter: $bg_blur;
+    color: $accent;
+    background-color: $blue-pale;
+    border-radius: $radius;
+
+    [data-theme='dark'] & {
+      color: $dark;
+      background: $grey;
+      backdrop-filter: blur(12px);
+    }
+  }
+}
+.progress {
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+  height: toRem(24);
+  width: toRem(168);
+  border-radius: toRem(40);
+  background-color: $grey_lavander;
+  overflow: hidden;
+  &__done {
+    @include flexRow(center);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: toRem(4);
+    border-radius: toRem(40);
+    background: $green;
+    height: toRem(24);
+    color: #fff;
+    font-size: toRem(10);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 14px */
+  }
+}

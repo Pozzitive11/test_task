@@ -1,0 +1,54 @@
+@import 'constants/constans';
+
+.content {
+  @include flexColumn();
+
+  gap: toRem(24);
+  color: $dark;
+  font-size: toRem(16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.5%; /* 22px */
+}
+
+.title {
+  color: $mainColor;
+  margin-bottom: toRem(8);
+  font-size: toRem(14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%; /* 20px*/
+}
+.info {
+  @include flexRow();
+  gap: toRem(24);
+
+  &__item {
+    @include flexColumn();
+    color: $dark;
+
+    &_subtitle {
+      @include flexRow(center, center);
+      height: toRem(40);
+      padding: 0 toRem(12);
+      gap: toRem(10);
+      border-radius: $radius;
+      border: toRem(1) solid $grey_pale;
+      color: $accent;
+      background-color: $blue-pale;
+
+      [data-theme='dark'] & {
+        color: $dark;
+        -webkit-text-fill-color: initial;
+      }
+    }
+  }
+}
+
+.list {
+  margin-left: toRem(18);
+}
+
+.image {
+  margin-bottom: toRem(24);
+}

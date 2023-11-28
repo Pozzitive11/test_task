@@ -1,0 +1,22 @@
+@import 'constants/constans';
+.wrapper {
+  @include flexRow();
+  gap: toRem(24);
+}
+.rating {
+  margin-bottom: toRem(24);
+}
+.section {
+  &__header {
+    @include flexRow(center);
+    gap: toRem(24);
+  }
+}
+.button_back {
+  @include flexRow(center, center);
+
+  padding: 0 !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+  height: 48px;
+}

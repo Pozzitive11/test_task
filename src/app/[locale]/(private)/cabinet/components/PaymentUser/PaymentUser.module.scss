@@ -1,0 +1,57 @@
+@import 'constants/constans';
+
+.user {
+  padding: toRem(16);
+  border-radius: toRem(16);
+  background-color: $grey;
+
+  [data-theme='dark'] & {
+    background-color: $blue_pale;
+  }
+  &__top {
+    display: block;
+    margin-bottom: toRem(12);
+    color: $mainColor;
+    font-size: toRem(14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%; /* 20px*/
+  }
+
+  &__content {
+    @include flexRow(center, space-between);
+  }
+
+  &__left {
+    @include flexRow();
+  }
+
+  &__image {
+    margin-right: toRem(8);
+  }
+
+  &__name {
+    margin-bottom: toRem(4);
+    color: $dark;
+    font-size: toRem(16);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 137.5%; /* 22px */
+  }
+
+  &__button {
+    @include flexRow(center, center);
+    width: toRem(48);
+    height: toRem(48);
+
+    border-radius: $radius;
+    color: $accent;
+    background-color: $blue-pale;
+
+    [data-theme='dark'] & {
+      color: $dark;
+      border: toRem(1) solid $grey_pale;
+      background: $grey;
+    }
+  }
+}

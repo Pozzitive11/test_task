@@ -1,0 +1,42 @@
+@import 'constants/constans';
+
+.products {
+  @include flexRow(center);
+  gap: toRem(24);
+}
+
+.product {
+  width: toRem(280);
+  border-radius: toRem(20);
+  border: toRem(1) solid $grey_pale;
+  background: $grey;
+  backdrop-filter: $bg_blur;
+  background-image: url(../../../assets/images/backgrounds/small-shade.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: toRem(20);
+  padding-top: toRem(43);
+  text-align: center;
+
+  &__image {
+    margin-bottom: toRem(63);
+  }
+
+  &__title {
+    margin-bottom: toRem(8);
+    color: $dark;
+    font-size: toRem(20);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 28px */
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: toRem(24);
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
